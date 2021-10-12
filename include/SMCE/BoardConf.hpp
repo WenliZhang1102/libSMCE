@@ -41,7 +41,6 @@ struct SMCE_API BoardConfig {
         struct AnalogDriver {
             bool board_read;
             bool board_write;
-            // std::size_t width;
         };
         std::uint16_t pin_id{};
         std::optional<DigitalDriver> digital_driver;
