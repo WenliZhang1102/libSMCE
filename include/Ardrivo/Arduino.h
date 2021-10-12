@@ -26,6 +26,9 @@
 #include <cstdlib>
 #include "SMCE_dll.hpp"
 
+#include "HardwareSerial.h"
+#include "WString.h"
+
 #define PROGMEM
 #define F(str) str
 
@@ -120,8 +123,5 @@ inline void randomSeed(unsigned long s) { std::srand(s); }
 
 void setup(); /// User-defined sketch setup
 void loop();  /// User-defined sketch loop
-
-#include "HardwareSerial.h"
-#include "WString.h"
 
 #endif // ARDUINO_H
