@@ -65,9 +65,16 @@ SMCE__DLL_RT_API unsigned long millis();
 //** Math **//
 using std::abs;
 // Straight from https://www.arduino.cc/reference/en/language/functions/math/map/#Appendix
-inline long map(long x, long in_min, long in_max, long out_min, long out_max) {
-    return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
+//inline long map(long x, long in_min, long in_max, long out_min, long out_max) {
+//    return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
+//}
+
+long a = long((x - in_min) * (out_max - out_min) / (in_max - in_min));
+long b = long(out_min);
+inline long map(long a, long b) {
+    return a + b;
 }
+
 using std::max;
 using std::min;
 using std::pow;

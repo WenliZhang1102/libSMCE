@@ -62,8 +62,8 @@ struct SMCE_API BoardConfig {
     };
     */
     struct SMCE_API SecureDigitalStorage {
-        std::uint16_t cspin = 0; /// SPI Chip-Select pin; default one opened is 0
-        stdfs::path root_dir;    /// Path to root directory
+        std::uint16_t spi_chip_select pin = 0;
+        stdfs::path root_dir;
     };
 
     struct SMCE_API FrameBuffer {
