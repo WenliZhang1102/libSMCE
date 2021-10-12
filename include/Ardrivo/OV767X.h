@@ -46,7 +46,6 @@ class SMCE__DLL_RT_API OV767X {
     OV767X() noexcept;
     ~OV767X();
 
-    void setPins(int vsync, int href, int pclk, int xclk, const int dpins[8]);
     void setPins(int vsync, int href, int pclk, int xclk, std::array<int, 8> dpins);
 
     int begin(SMCE_OV767_Resolution resolution, SMCE_OV767_Format format, int fps); // Supported FPS: 1, 5, 10, 15, 30
